@@ -5,7 +5,7 @@ USE mercadinho;
 CREATE TABLE IF NOT EXISTS Venda(
 	idVenda INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	valorTotal REAL NOT NULL,
-	dataHora DATETIME NOT NULL DEFAULT NOW()
+	dataHora DATETIME DEFAULT NOW()
 );
 
 CREATE TABLE IF NOT EXISTS Produto(
@@ -24,15 +24,15 @@ CREATE TABLE IF NOT EXISTS ItemVenda(
 	FOREIGN KEY (idProduto) REFERENCES Produto(idProduto)
 );
 
-INSERT INTO Produto VALUES (NULL, 3.59,'Macarrão');
+INSERT INTO Produto VALUES (NULL, 'Macarrão', 3.59);
 
-INSERT INTO Produto VALUES (NULL, 7.34, 'Suco de laranja');
+INSERT INTO Produto VALUES (NULL, 'Suco de laranja', 7.34);
 
-INSERT INTO Produto VALUES (NULL, 8.67, 'Energy Drink');
+INSERT INTO Produto VALUES (NULL, 'Energy Drink', 8.67);
 
-INSERT INTO Produto VALUES (NULL, 4.56, 'Margarina');
+INSERT INTO Produto VALUES (NULL, 'Margarina', 4.56);
 
-INSERT INTO Produto VALUES (NULL, 8.79, 'Amendoim');
+INSERT INTO Produto VALUES (NULL, 'Amendoim', 8.79);
 
 
 INSERT INTO Venda VALUES (NULL, 10, NULL);
